@@ -1,0 +1,92 @@
+{
+  "name": "odyssey-rogue-one",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Odyssey:Rogue One",
+  "main": "dist/index.html",
+  "scripts": {
+    "clean": "rimraf dist && mkdirp dist",
+    "prebuild": "npm run clean",
+    "build": "NODE_ENV=production parcel build src/index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "start": "DEBUG=true parcel src/index.html"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ],
+    "plugins": [
+      "styled-components",
+      "transform-react-require",
+      "lodash",
+      [
+        "module-resolver",
+        {
+          "root": [
+            "./src"
+          ]
+        }
+      ]
+    ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "ignore": [
+      "**/node_modules/**",
+      "**/lib/"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mattstyles/odyssey-rogue-one.git"
+  },
+  "keywords": [
+    "raid",
+    "react",
+    "game",
+    "odyssey",
+    "rogue",
+    "roguelike"
+  ],
+  "author": "mattstyles",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mattstyles/odyssey-rogue-one/issues"
+  },
+  "homepage": "https://mattstyles.github.io/odyssey-rogue-one",
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "eventemitter3": "^3.1.0",
+    "lodash": "^4.17.10",
+    "most": "^1.7.3",
+    "open-color": "^1.6.3",
+    "prop-types": "^15.6.2",
+    "raid": "^2.13.0",
+    "raid-addons": "^2.13.0",
+    "raid-navigator": "^2.13.0",
+    "raid-streams": "^2.13.0",
+    "react": "^16.4.2",
+    "react-dom": "^16.4.2",
+    "react-helmet": "^5.2.0",
+    "reselect": "^2.5.4",
+    "styled-components": "^3.4.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^9.0.0",
+    "babel-plugin-lodash": "^3.3.4",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-styled-components": "^1.6.2",
+    "babel-plugin-transform-react-require": "^1.0.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-urban": "^1.0.1",
+    "create-raid-app": "^2.13.0",
+    "gh-pages": "^1.2.0",
+    "minimist": "^1.2.0",
+    "mkdirp": "^0.5.1",
+    "ncp": "^2.0.0",
+    "parcel-bundler": "^1.9.7",
+    "rimraf": "^2.6.2",
+    "standard": "^12.0.1"
+  }
+}
