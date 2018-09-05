@@ -1,0 +1,3 @@
+[submodule "packages/animatron"]
+	path = packages/animatron
+	url = git@github.com:mattstyles/animatron
