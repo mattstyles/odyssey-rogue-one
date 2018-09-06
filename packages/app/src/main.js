@@ -2,18 +2,24 @@
 import { render } from 'react-dom'
 
 import { signal } from 'signals'
-import { debug } from 'core/updates'
 import { App } from 'components'
+import { Navigation } from 'components/navigation'
+
+import { attachUpdates } from 'core/register'
+
+attachUpdates()
+
+if (process.env.DEBUG) {
+  window.signal = signal
+}
 
 const el = document.querySelector('.js-main')
 
-if (process.env.DEBUG) {
-  signal.register(debug)
-}
-
 signal.observe(state => {
   render(
-    <App state={state} />,
+    <App>
+      <Navigation transition={state.transition} navigation={state.navigation} />
+    </App>,
     el
   )
 }, err => console.error(err))
@@ -24,11 +30,13 @@ if (module.hot) {
     console.log('disposing signal updates')
 
     signal.disposeAll()
+    signal.observers = []
 
     console.groupEnd('[HMR] dispose')
   })
   module.hot.accept(() => {
     console.group('[HMR] accept')
+    // attachUpdates()
     signal.emit({
       hmr: 'accept'
     })

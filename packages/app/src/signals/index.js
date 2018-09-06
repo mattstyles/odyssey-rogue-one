@@ -6,7 +6,7 @@ const initial = {
   message: 'hello'
 }
 
-export const signal = new Signal(initial)
+export const signal = Signal.of(initial)
 export const connect = adaptor(signal)
 export const dispatch = type => payload => signal.emit({ type, payload })
 export const emit = (type, payload) => signal.emit({ type, payload })
