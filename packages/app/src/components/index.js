@@ -1,6 +1,9 @@
 
+import styled from 'styled-components'
+
 export { App } from './app'
 
-export const H1 = ({ children }) => (
-  <h1 style={{ color: 'green' }}>{children}</h1>
-)
+export const H1 = styled.h1`
+  display: ${props => props.inline && 'inline-block'};
+  color: red;
+`

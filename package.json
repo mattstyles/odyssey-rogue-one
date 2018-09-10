@@ -1,6 +1,9 @@
 {
   "name": "@odyssey-rogue-one/monorepo",
   "private": "true",
+  "workspaces": [
+    "packages/*"
+  ],
   "version": "0.0.0",
   "description": "",
   "main": "index.js",

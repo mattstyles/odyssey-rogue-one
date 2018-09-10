@@ -58,7 +58,7 @@
   },
   "homepage": "https://mattstyles.github.io/odyssey-rogue-one",
   "dependencies": {
-    "animatron": "^0.2.0",
+    "animatron": "*",
     "classnames": "^2.2.6",
     "eventemitter3": "^3.1.0",
     "history": "^4.7.2",
