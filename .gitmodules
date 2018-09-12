@@ -1,3 +1,9 @@
 [submodule "packages/animatron"]
 	path = packages/animatron
 	url = git@github.com:mattstyles/animatron
+[submodule "packages/react-basic-kit"]
+	path = packages/react-basic-kit
+	url = git@github.com:mattstyles/react-basic-kit
+[submodule "packages/react-gaming-kit"]
+	path = packages/react-gaming-kit
+	url = git@github.com:mattstyles/react-gaming-kit
