@@ -1,23 +1,22 @@
 
+import { AppearIn } from 'animatron'
+import { View } from 'react-basic-kit'
+
 import { H1 } from 'components'
 import { push, pop, routes } from 'core/routing'
 
-import { AppearIn } from 'animatron'
-import { Title } from 'react-basic-kit'
-
 export const Home = () => (
-  <div>
+  <View>
     <H1>Something colourful</H1>
     <h1>Odyssey:Rogue One</h1>
-    <Title>From kit</Title>
     <button onClick={push({
       route: routes.base
     })}>Go to base</button>
-  </div>
+  </View>
 )
 
 export const Test = () => (
-  <div>
+  <View>
     <H1>Base</H1>
     <div>
       <AppearIn in appear delay={{
@@ -28,5 +27,5 @@ export const Test = () => (
       </AppearIn>
     </div>
     <button onClick={pop({})}>Back</button>
-  </div>
+  </View>
 )

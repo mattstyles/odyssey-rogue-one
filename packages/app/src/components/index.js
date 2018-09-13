@@ -6,5 +6,5 @@ export { App } from './app'
 
 export const H1 = styled.h1`
   display: ${props => props.inline && 'inline-block'};
-  color: ${c64.void};
+  color: ${props => props.theme.type.color.heading || c64.void};
 `
