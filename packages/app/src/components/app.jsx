@@ -1,9 +1,13 @@
 
+import React, { Fragment } from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from 'react-basic-kit'
+import { theme, GlobalStyle } from 'react-basic-kit'
 
 export const App = ({ state, children }) => (
   <ThemeProvider theme={theme}>
-    {children}
+    <Fragment>
+      <GlobalStyle />
+      {children}
+    </Fragment>
   </ThemeProvider>
 )
