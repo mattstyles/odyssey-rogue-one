@@ -3,11 +3,13 @@ import { H1 } from 'components'
 import { push, pop, routes } from 'core/routing'
 
 import { AppearIn } from 'animatron'
+import { Title } from 'react-basic-kit'
 
 export const Home = () => (
   <div>
     <H1>Something colourful</H1>
     <h1>Odyssey:Rogue One</h1>
+    <Title>From kit</Title>
     <button onClick={push({
       route: routes.base
     })}>Go to base</button>
