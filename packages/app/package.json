@@ -14,14 +14,19 @@
   },
   "babel": {
     "presets": [
-      "env",
-      "stage-3",
-      "react"
+      "@babel/preset-env",
+      "@babel/preset-react"
     ],
     "plugins": [
       "styled-components",
       "transform-react-require",
       "lodash",
+      [
+        "@babel/plugin-proposal-class-properties",
+        {
+          "loose": false
+        }
+      ],
       [
         "module-resolver",
         {
@@ -66,33 +71,34 @@
     "most": "^1.7.3",
     "open-color": "^1.6.3",
     "prop-types": "^15.6.2",
-    "raid": "^2.13.0",
-    "raid-addons": "^2.13.0",
-    "raid-navigator": "^2.13.0",
-    "raid-streams": "^2.13.0",
-    "react": "^16.5.0",
-    "react-dom": "^16.5.0",
+    "raid": "^3.0.0",
+    "raid-addons": "^3.0.0",
+    "raid-navigator": "^3.0.0",
+    "raid-streams": "^3.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-helmet": "^5.2.0",
-    "react-transition-group": "^2.4.0",
+    "react-transition-group": "^2.5.0",
     "reselect": "^2.5.4",
     "styled-components": "^4.1.1"
   },
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
     "babel-plugin-lodash": "^3.3.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.8.0",
     "babel-plugin-transform-react-require": "^1.0.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-preset-urban": "^1.0.1",
-    "create-raid-app": "^2.13.0",
+    "create-raid-app": "^3.0.0",
     "gh-pages": "^1.2.0",
     "minimist": "^1.2.0",
     "mkdirp": "^0.5.1",
     "ncp": "^2.0.0",
-    "parcel-bundler": "^1.9.7",
+    "parcel-bundler": "^1.10.3",
     "rimraf": "^2.6.2",
     "standard": "^12.0.1"
   }
